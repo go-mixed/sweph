@@ -48,7 +48,18 @@ mingw32-make libswe.so
 
 Done, `libswe.so` is now in the folder, rename to `libswe.dll`
 
-**Ps:** It's a **static DLL** within any c runtime on windows.
+#### Needs VC Runtime? NO
+
+> Show import tables via `Detect it easy`
+
+Import dependencies：
+```
+kernel32.dll
+msvcrt.dll
+```
+The two DLLs above are in native `Windows XP+`.
+
+So `libswe.dll` **NO** needs any VC runtime like vc6, vc14. It's a **static DLL**
 
 ### Build .a
 
